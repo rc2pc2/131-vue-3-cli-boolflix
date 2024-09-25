@@ -28,7 +28,6 @@ export default {
       },
 
       getMovies(query){
-        // console.log(query);
         axios.get(this.apiUrl + "movie", {
             params: {
               api_key: this.apiKey,
@@ -45,7 +44,6 @@ export default {
       },
 
       getTvSeries(query){
-        // console.log(query);
         axios.get(this.apiUrl + "tv", {
             params: {
               api_key: this.apiKey,
