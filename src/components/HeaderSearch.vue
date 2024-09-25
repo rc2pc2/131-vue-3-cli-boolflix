@@ -22,7 +22,7 @@ export default {
     </h2>
     <div>
         <input type="text" v-model.trim="store.searchedInput" @keyup.enter="sendNewQuery">
-        <button @click="sendNewQuery">Search</button>
+        <button @click="sendNewQuery">Search series and movies</button>
     </div>
 </template>
 
