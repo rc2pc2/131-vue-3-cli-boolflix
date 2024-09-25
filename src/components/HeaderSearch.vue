@@ -5,18 +5,12 @@ export default {
     data() {
         return {
             store,   
-            userInput: '',
         }
     },
     methods:{
-        // prendo la stringa che mi viene data come argomento
         sendNewQuery(){
-            // e la stampo in console
-            // console.log(message);
-
-            // emettere un evento chiamato "searched" al parent
+            // attivo un evento chiamato "searched" al parent
             this.$emit("searched");
-            // this.store.searchedInput = message;
         }
     }
 }
@@ -27,7 +21,7 @@ export default {
         HeaderSearch
     </h2>
     <div>
-        <input type="text" v-model="store.searchedInput">
+        <input type="text" v-model.trim="store.searchedInput" @keyup.enter="sendNewQuery">
         <button @click="sendNewQuery">Search</button>
     </div>
 </template>
